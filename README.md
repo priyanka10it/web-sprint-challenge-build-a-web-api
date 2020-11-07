@@ -61,10 +61,56 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. The core features of Node.js and Express and why they are useful.
+
+Ans.
+Features and use of Node.js:
+1.JavaScript on the server: use the same programming language and paradigm for both client and server. This minimizes context switching and makes it easy to share code between the client and the server.
+2.Single-threaded: removes the complexity involved in handling multiple threads.
+3.Asynchronous: can take full advantage of the processor it's running on. This matters because the node process will be running on a single CPU.
+4.Npm repository: access the largest ecosystem of useful libraries (most of them free to use) in the form of npm modules.
+
+Use of Express:
+1.Simple
+2.Unopinionated
+3.Extensible
+4.Light-weight
+5.Compatible with connect middleware (Links to an external site.). (This means we can tap into an extensive collection of modules written for connect.)
+6.All packaged into a clean, intuitive, and easy to use API.
+7.Abstracts away common tasks (writing web applications can be verbose, hence the need for a library like this)
+
+Features of Express:
+1.Middleware
+2.Routing
+3.Routers for Application Modularity
+4.Convenience Helpers
+5.Views
+
 1. Understand and explain the use of Middleware?
+
+ans.Middleware functions are functions that have access to the request object (req), the response object (res), and the next function in the application’s request-response cycle. The next function is a function in the Express router which, when invoked, executes the middleware succeeding the current middleware.
+
+Middleware functions can perform the following tasks:
+Execute any code.
+Make changes to the request and the response objects.
+End the request-response cycle.
+Call the next middleware in the stack.
+
 1. The basic principles of the REST architectural style.
+
+Ans.
+1.Everything is a resource.
+2.Each resource is accessible via a unique URI.
+3.Resources can have multiple representations.
+4.Communication happens over a stateless protocol (HTTP).
+5.Resource management happens via HTTP methods.
+
 1. Understand and explain the use of Express Routers.
+
+Ans.It basically mounts middleware for the routes which are being served by the specific router. Parameters: Path: It is the path to this middleware, like if we can have /user, now this middleware is called for all API's having /user of this router.
+
 1. Describe tooling used to manually test the correctness of an API.
+
+Ans. PostMan is used to manually test the correctness of an API.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -72,12 +118,12 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project
-- [ ] Add your team lead as collaborator on Github
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
-- [ ] Push commits: git push origin `<firstName-lastName>`
+- [x] Create a forked copy of this project
+- [x] Add your team lead as collaborator on Github
+- [x] Clone your OWN version of the repository (Not Lambda's by mistake!)
+- [x] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
+- [x] Push commits: git push origin `<firstName-lastName>`
 
 ### Task 2: Project Requirements
 
@@ -85,16 +131,16 @@ Your finished project must include all of the following requirements:
 
 #### NPM Scripts
 
-- [ ] An _npm script_ named _"server"_ that uses `nodemon`to run the API server.
-- [ ] Use _nodemon_ as a development time dependency only that is not deployed to production.
-- [ ] An _npm script_ named _"start"_ that uses `node` to run the API server.
+- [x] An _npm script_ named _"server"_ that uses `nodemon`to run the API server.
+- [x] Use _nodemon_ as a development time dependency only that is not deployed to production.
+- [x] An _npm script_ named _"start"_ that uses `node` to run the API server.
 
 #### Build an API
 
-- [ ] Design and build endpoints for performing CRUD operations on _projects_ and _actions_. When adding an action, make sure the `project_id` provided belongs to an existing `project`. If you try to add an action with an `id` of 3 and there is no project with that `id` the database will return an error.
-- [ ] Add an endpoint for retrieving the list of actions for a project.
-- [ ] Use an HTTP client like `postman` or `insomnia` to test the API's endpoints.
-- [ ] Use Express Routers to organize the API's code.
+- [x] Design and build endpoints for performing CRUD operations on _projects_ and _actions_. When adding an action, make sure the `project_id` provided belongs to an existing `project`. If you try to add an action with an `id` of 3 and there is no project with that `id` the database will return an error.
+- [x] Add an endpoint for retrieving the list of actions for a project.
+- [x] Use an HTTP client like `postman` or `insomnia` to test the API's endpoints.
+- [x] Use Express Routers to organize the API's code.
 
 In your solution, it is essential that you follow best practices and produce clean and professional results. You will be scored on your adherence to proper code style and good organization. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
